@@ -6,7 +6,7 @@ terraform {
   backend "azurerm" {}
 }
 
-resource "azurerm_resource_group" "DBA42" {
+resource "azurerm_resource_group" "project42" {
   name = "S2-RG-Test42"
   location = "westeurope"
 }
