@@ -1,4 +1,5 @@
 # Starter pipeline
+
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -26,3 +27,8 @@ steps:
     backendAzureRmStorageAccountName: 's2storageaccountdba42'
     backendAzureRmContainerName: 's2containerdba42'
     backendAzureRmKey: 'terraform.tfstate'
+- task: TerraformTaskV3@3
+  inputs:
+    provider: 'azurerm'
+    command: 'plan'
+    environmentServiceNameAzureRM: 'S2-Visual Studio Ultimate with MSDN(e442b2de-cb70-403f-ac05-5f1d661fb7fa)'
