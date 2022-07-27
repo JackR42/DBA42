@@ -12,3 +12,6 @@ pool:
 steps:
 - script: echo Azure DevOps pipeline!
   displayName: 'DBA42'
+  - task: TerraformInstaller@0
+    inputs:
+      terraformVersion: 'latest'
