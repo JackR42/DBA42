@@ -11,8 +11,8 @@ resource "azurerm_resource_group" "project42" {
   location = "westeurope"
 }
 
-resource "azurerm_sql_server" "project42" {
-  name                         = "sqlserver42_b689e6e9"
+resource "azurerm_mssql_server" "project42" {
+  name                         = "sqlserver42x689e6e9"
   resource_group_name          = azurerm_resource_group.project42.name
   location                     = azurerm_resource_group.project42.location
   version                      = "12.0"
