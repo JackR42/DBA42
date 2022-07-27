@@ -25,3 +25,4 @@ resource "azurerm_sql_database" "DBA42" {
   resource_group_name = azurerm_resource_group.DBA42.name
   location            = azurerm_resource_group.DBA42.location
   server_name         = azurerm_sql_server.DBA42.name
+}
