@@ -18,9 +18,11 @@ steps:
     terraformVersion: 'latest'
 - task: TerraformTaskV3@3
   displayName: 'Intializing Terraform'
+- task: TerraformTaskV3@3
   inputs:
     provider: 'azurerm'
     command: 'init'
+    backendServiceArm: 'S2-Visual Studio Ultimate with MSDN(2)(e442b2de-cb70-403f-ac05-5f1d661fb7fa)'
     backendAzureRmResourceGroupName: 'S2-RG-DevOps'
     backendAzureRmStorageAccountName: 's2storageaccountdevops42'
     backendAzureRmContainerName: 's2containerdevops42'
