@@ -12,7 +12,7 @@ resource "azurerm_resource_group" "project42" {
 }
 
 resource "azurerm_sql_server" "project42" {
-  name                         = "sqlserver42"
+  name                         = "sqlserver42_b689e6e9"
   resource_group_name          = azurerm_resource_group.project42.name
   location                     = azurerm_resource_group.project42.location
   version                      = "12.0"
