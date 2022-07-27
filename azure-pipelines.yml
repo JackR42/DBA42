@@ -18,7 +18,7 @@ steps:
   inputs:
     terraformVersion: '1.2.5'
 - task: TerraformTaskV3@3
-  displayName: 'Initializing Terraform'
+  displayName: 'Terraform INIT'
   inputs:
     provider: 'azurerm'
     command: 'init'
@@ -28,7 +28,13 @@ steps:
     backendAzureRmContainerName: 's2containerdba42'
     backendAzureRmKey: 'terraform.tfstate'
 - task: TerraformTaskV3@3
+  displayName: 'Terraform PLAN'
   inputs:
     provider: 'azurerm'
     command: 'plan'
     environmentServiceNameAzureRM: 'S2-Visual Studio Ultimate with MSDN(e442b2de-cb70-403f-ac05-5f1d661fb7fa)'
+- task: TerraformTaskV3@3
+  displayName: 'Terraform VALIDATE'
+  inputs:
+    provider: 'azurerm'
+    command: 'validate'
