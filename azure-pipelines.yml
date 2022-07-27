@@ -13,11 +13,11 @@ steps:
 - script: echo Azure DevOps pipeline!
   displayName: 'DBA42'
 - task: TerraformInstaller@0
-  displayName: 'Installer Terraform'
+  displayName: 'Installing Terraform'
   inputs:
     terraformVersion: 'latest'
 - task: TerraformTaskV3@3
-  displayName: 'Intialize Terraform'
+  displayName: 'Intializing Terraform'
   inputs:
     provider: 'azurerm'
     command: 'init'
