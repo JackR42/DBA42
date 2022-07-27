@@ -21,7 +21,7 @@ resource "azurerm_sql_server" "project42" {
 }
 
 resource "azurerm_sql_database" "project42" {
-  name                = "DBA42"
+  name                = "dba42"
   resource_group_name = azurerm_resource_group.project42.name
   location            = azurerm_resource_group.project42.location
   server_name         = azurerm_sql_server.project42.name
