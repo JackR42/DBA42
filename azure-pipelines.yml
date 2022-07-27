@@ -15,3 +15,12 @@ steps:
 - task: TerraformInstaller@0
   inputs:
     terraformVersion: 'latest'
+- task: TerraformTaskV3@3
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    backendServiceArm: 'S2-Visual Studio Ultimate with MSDN(e442b2de-cb70-403f-ac05-5f1d661fb7fa)'
+    backendAzureRmResourceGroupName: 'S2-RG-DBA42'
+    backendAzureRmStorageAccountName: 's2storageaccountdba42'
+    backendAzureRmContainerName: 's2containerdba42'
+    backendAzureRmKey: 'terraform.tfstate'
